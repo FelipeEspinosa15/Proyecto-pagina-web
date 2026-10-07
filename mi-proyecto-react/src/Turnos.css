@@ -1,0 +1,249 @@
+section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 2px solid #646cff;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.stat {
+  flex: 1;
+  max-width: 150px;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.stat.pendiente {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat.en_atencion {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat.completado {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat .numero {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stat .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.filtros {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  padding: 8px 16px;
+  border: 2px solid #646cff;
+  background: white;
+  color: #646cff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtros button:hover {
+  background: #646cff;
+  color: white;
+}
+
+.filtros button.activo {
+  background: #646cff;
+  color: white;
+}
+
+.lista-turnos {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.turno {
+  background: #f9f9f9;
+  border-left: 4px solid #646cff;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.turno:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.turno.estado-pendiente {
+  border-left-color: #667eea;
+}
+
+.turno.estado-en_atencion {
+  border-left-color: #f5576c;
+}
+
+.turno.estado-completado {
+  border-left-color: #00f2fe;
+  opacity: 0.8;
+}
+
+.turno-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.hora {
+  font-size: 12px;
+  color: #888;
+  font-weight: bold;
+}
+
+.prioridad {
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.info-turno {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.info-turno strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.info-turno .motivo {
+  color: #666;
+  font-size: 14px;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.acciones button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-estado {
+  color: white;
+}
+
+.btn-pendiente {
+  background: #667eea;
+}
+
+.btn-en_atencion {
+  background: #f5576c;
+}
+
+.btn-completado {
+  background: #00f2fe;
+  color: #333;
+}
+
+.btn-eliminar {
+  background: #ff4757;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #ff3344;
+}
+
+.sin-resultados {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.formulario {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.formulario h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
+}
+
+.formulario button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.formulario button[type="submit"]:hover {
+  transform: scale(1.02);
+}
